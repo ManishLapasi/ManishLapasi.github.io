@@ -1,0 +1,125 @@
+.tiltCard {
+    position: relative;
+    border: 3px transparent lime;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 0rem;
+    margin-top: 20vh;
+    margin-left: 20vw;
+}
+
+
+.pokemonCard {
+
+    --perspective: 500px;
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+
+    width: 30vw;
+
+    border: 5px solid rgb(240, 210, 130,0.2);
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 4px rgba(0,0,0,0.2);
+    padding: 2%;
+    background-image: linear-gradient(to bottom right, rgb(240, 210, 130), rgb(240, 210, 130));
+
+    transform: 
+        perspective(var(--perspective))
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY));
+
+    transition: all 400ms;
+}
+
+.mouse-pointer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+.child0:hover ~ .pokemonCard {
+    --rotateX: 15deg;
+}
+
+.child1:hover ~ .pokemonCard {
+    --rotateX: 15deg;
+    --rotateY: -15deg;
+}
+
+.child2:hover ~ .pokemonCard {
+    --rotateX: 15deg;
+    --rotateY: 15deg;
+}
+
+.child3:hover ~ .pokemonCard {
+    --rotateX: 0deg;
+}
+
+.child4:hover ~ .pokemonCard {
+    --rotateY: -15deg;
+}
+
+.child5:hover ~ .pokemonCard {
+    --rotateY: 15deg;
+}
+
+.child6:hover ~ .pokemonCard {
+    --rotateX: -15deg;
+}
+
+.child7:hover ~ .pokemonCard {
+    --rotateX: -15deg;
+    --rotateY: -15deg;
+}
+
+.child8:hover ~ .pokemonCard {
+    --rotateX: -15deg;
+    --rotateY: 15deg;
+}
+
+
+/* last column */
+.mouse-pointer:nth-of-type(3n) {
+    background-color: red;
+    grid-column: 3/4;
+}
+
+/* middle column */
+.mouse-pointer:nth-of-type(3n+1) {
+    background-color: blue;
+    grid-column: 2/3;
+}
+
+/* first column */
+.mouse-pointer:nth-of-type(3n+2) {
+    background-color: green;
+    grid-column: 1/2;
+}
+
+/* first row */
+.mouse-pointer:nth-child(n+1):nth-child(-n+3){
+    grid-row: 1/2;
+}
+
+/* middle row */
+.mouse-pointer:nth-child(n+4):nth-child(-n+6) {
+    grid-row: 2/3;
+}
+
+/* last row */
+.mouse-pointer:nth-child(n+7):nth-child(-n+9) {
+    grid-row: 3/4;
+}
+
+
+
+.cardBody {
+    background-image: linear-gradient(to bottom right, #03a9f4, #ff0058);
+    width: 100%;
+    border-radius: 5px;
+}
