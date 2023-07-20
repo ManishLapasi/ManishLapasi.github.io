@@ -1,17 +1,6 @@
-.centeredContent {
-    width: 30vw;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 32px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    transform: translate(0,30vh);
-}
 
-.centeredContent:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,1);
+.introBox:hover span:hover {
+    transform: rotateX(-45deg);
 }
 
 @keyframes fadeIn {
@@ -23,10 +12,6 @@
     }
 }
 
-.centeredContent .p0 {
-    animation: 1s fadeIn forwards;
-}
-
-.centeredContent .p1 {
-    animation: 1s fadeIn forwards ;
+.nameDiv {
+    transition: all 300ms;
 }

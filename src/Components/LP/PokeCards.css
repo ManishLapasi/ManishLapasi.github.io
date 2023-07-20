@@ -11,7 +11,6 @@
 
 
 .pokemonCard {
-
     --perspective: 500px;
     --rotateX: 0deg;
     --rotateY: 0deg;
@@ -19,7 +18,7 @@
     grid-column: 1 / -1;
     grid-row: 1 / -1;
 
-    width: 30vw;
+    width: 20vw;
 
     border: 5px solid rgb(240, 210, 130,0.2);
     border-radius: 5px;
@@ -39,7 +38,7 @@
     position: absolute;
     inset: 0;
     z-index: 2;
-    opacity: 0;
+    opacity: 0.2;
 }
 
 .child0:hover ~ .pokemonCard {
@@ -85,19 +84,16 @@
 
 /* last column */
 .mouse-pointer:nth-of-type(3n) {
-    background-color: red;
     grid-column: 3/4;
 }
 
 /* middle column */
 .mouse-pointer:nth-of-type(3n+1) {
-    background-color: blue;
     grid-column: 2/3;
 }
 
 /* first column */
 .mouse-pointer:nth-of-type(3n+2) {
-    background-color: green;
     grid-column: 1/2;
 }
 
@@ -116,10 +112,71 @@
     grid-row: 3/4;
 }
 
-
-
 .cardBody {
     background-image: linear-gradient(to bottom right, #03a9f4, #ff0058);
     width: 100%;
+    max-height: 95%;
     border-radius: 5px;
+    align-content: center;
+}
+
+.skillType {
+    border-radius: 5px;
+    background-color: grey;
+    width: fit-content;
+    padding: 2px;
+    -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    -webkit-mask-size: 800%;
+    mask-size: 800%;
+    animation: shine 3s infinite;
+    opacity: 1;
+}
+
+@keyframes shine {
+    0% {
+        mask-position: 120%;
+    }
+    100% {
+        mask-position: 0%;
+    }
+}
+
+.techIKnow {
+    font-family: monospace;
+    font-style: italic;
+    text-align: center;
+}
+
+.nameYoe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2%;
+}
+
+.nameYoe .skillName {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: start;
+}
+
+.nameYoe .yoe {
+    text-align: end;
+}
+
+.skillDesc {
+    padding: 2px;
+    height: 2em;
+}
+
+.skillImg {
+    display: block;
+    margin: 10%;
+    width:80%;
+    height: auto;
+}
+
+@media screen and (max-width: 500px){
+    .pokemonCard {
+        width: 60vw;
+    }
 }

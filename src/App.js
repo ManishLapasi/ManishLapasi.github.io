@@ -1,4 +1,3 @@
-import MyCanvas from "./Components/Exp/Elements";
 import IntroBox from "./Components/LP/IntroBox";
 import Summary from "./Components/LP/Summary";
 import WorkExp from "./Components/Exp/WorkExp";
@@ -7,8 +6,8 @@ import './App.css'
 
 function App() {
   return (
-    <div>
-      <div className="onePage" style={{display: "flex", flexFlow: "row wrap"}}>
+    <div className="App">
+      <div style={{display: "flex", flexFlow: "row wrap"}}>
         <div>
           <IntroBox/>
           <Summary/>
@@ -17,7 +16,7 @@ function App() {
           <Cards/>  
         </div>  
       </div>
-      <div className="onePage">
+      <div >
         <WorkExp />
       </div>
     </div>
