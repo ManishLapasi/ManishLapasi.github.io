@@ -161,7 +161,9 @@ const Card = () => {
               <p className="skillName">{obj.name}</p>
               <p className="yoe">{obj.yoe}</p>
             </div>
-            <img className="skillImg" src={"./skill_imgs/"+obj.img_loc} width={"100%"} height={"auto"}></img>
+            <div className="imgContainer">
+              <img className="skillImg" src={"./skill_imgs/"+obj.img_loc}></img>
+            </div>
             <div className="skillDesc">{obj.summ}</div>
             <p className="techIKnow">Tech-I-Know</p>
           </div>

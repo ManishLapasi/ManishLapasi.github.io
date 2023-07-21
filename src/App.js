@@ -7,12 +7,12 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <div style={{display: "flex", flexFlow: "row wrap"}}>
-        <div>
+      <div className="pageOne" style={{display: "flex", flexFlow: "row wrap"}}>
+        <div style={{flexBasis: "50%", flexGrow: 0, alignItems: "center"}}>
           <IntroBox/>
           <Summary/>
         </div>
-        <div>
+        <div style={{flexBasis: "50%", flexGrow: 0, alignItems: "center"}}>
           <Cards/>  
         </div>  
       </div>

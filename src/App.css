@@ -6,9 +6,8 @@
   flex-flow: row wrap;
 }
 
-.onePage {
-  width: 90vw;
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 100vh;
+.pageOne {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 10vh;
 }

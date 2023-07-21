@@ -5,8 +5,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     padding: 0rem;
-    margin-top: 20vh;
-    margin-left: 20vw;
+    align-self: center;
+    align-items: center;
+    width: 50%;
+    min-width: 300px;
+    transform: translate(50%);
 }
 
 
@@ -18,7 +21,7 @@
     grid-column: 1 / -1;
     grid-row: 1 / -1;
 
-    width: 20vw;
+    align-self: center;
 
     border: 5px solid rgb(240, 210, 130,0.2);
     border-radius: 5px;
@@ -168,15 +171,20 @@
     height: 2em;
 }
 
-.skillImg {
-    display: block;
-    margin: 10%;
-    width:80%;
-    height: auto;
+.imgContainer {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-@media screen and (max-width: 500px){
-    .pokemonCard {
-        width: 60vw;
+.skillImg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px){
+    .tiltCard {
+        width: 80%;
+        transform: translate(0%);
     }
 }
