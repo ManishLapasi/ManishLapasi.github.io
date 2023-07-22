@@ -40,18 +40,19 @@
     text-align: left;
     background-color: aliceblue;
     color: rgb(46, 189, 194);
+    font-size: clamp(10px,calc(0.55em + 0.7vmin));
     width: fit-content;
 }
 
 .projectDesc {
-    font-size: clamp(12px,calc(0.55em + 0.7vmin));
+    font-size: clamp(10px,calc(0.55em + 0.7vmin));
     text-align: left;
     height: 2em;
 }
 
 .projectSkill {
     display: inline-block;
-    font-size: clamp(12px,calc(0.55em + 0.7vmin));
+    font-size: clamp(10px,calc(0.55em + 0.7vmin));
     border-radius: 2px;
     background-color: antiquewhite;
     width: fit-content;

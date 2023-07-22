@@ -21,7 +21,7 @@ const myskills = [
     name:"NodeJS", 
     type: "Framework",
     yoe: "2+",
-    summ:"The Web2 orchestrator",
+    summ:"Event-driven, asynchronous Web2 orchestrator",
     img_loc: "nodejs.png"
   },
   {
@@ -91,7 +91,7 @@ const myskills = [
     name:"Prometheus", 
     type: "Framework",
     yoe: "2",
-    summ:"Mails data to those dashboards",
+    summ:"Scrapes data for those dashboards (and others)",
     img_loc: "prometheus.png"
   },
   {
@@ -112,21 +112,21 @@ const myskills = [
     name:"AWS", 
     type: "Cloud",
     yoe: "2",
-    summ:"Cloud, from Amazon",
+    summ:"On-demand cloud computing, from Amazon",
     img_loc: "aws.png"
   },
   {
     name:"Azure", 
     type: "Cloud",
     yoe: "3+",
-    summ:"AWS if Microsoft",
+    summ:"Microsoft's hybrid take on cloud computing",
     img_loc: "azure.png"
   },
   {
     name:"GCP", 
     type: "Cloud",
     yoe: "1",
-    summ:"Azure if Google",
+    summ:"Google's cutting-edge answer to cloud computing",
     img_loc: "gcp.png"
   },
 ]

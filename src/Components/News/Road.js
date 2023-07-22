@@ -21,7 +21,7 @@ const Roads = () => {
             linkUrl1: 'https://manishlapasi.github.io/react-spotify',
             linkWordPos1: 0,
             linkDesc2: true,
-            linkUrl2: 'https://google.com',
+            linkUrl2: 'https://awstip.com/a-soir%C3%A9e-with-rust-b2de45986e42',
             linkWordPos2: 3
         },
         {

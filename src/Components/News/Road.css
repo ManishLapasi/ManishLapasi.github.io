@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: 15vw 60vw;
     padding: 5px;
-    font-size: calc(0.5em + 0.7vmin);
+    font-size: clamp(10px,calc(0.5em + 0.7vmin));
 }
 
 .eventDesc {
