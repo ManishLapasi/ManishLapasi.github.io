@@ -29,6 +29,8 @@ const handleClick = () => {
     doc.style.setProperty('--card-desc-bg-color', 'rgb(73, 76, 78)');
     doc.style.setProperty('--card-border-color', 'rgb(0, 0, 0)');
     doc.style.setProperty('--card-border-box-shadow', 'rgba(230,230,230,0.2)');
+    doc.style.setProperty('--mouse-color1', 'rgba(35, 21, 87, 0.2)');
+    doc.style.setProperty('--mouse-color2', 'rgba(143, 118, 170, 0.2)');
 
   }
   else {
@@ -48,6 +50,8 @@ const handleClick = () => {
     doc.style.setProperty('--card-desc-bg-color', 'rgb(240,248,255)');
     doc.style.setProperty('--card-border-color', 'rgb(240, 210, 130)');
     doc.style.setProperty('--card-border-box-shadow', 'rgba(0,0,0,0.2)');
+    doc.style.setProperty('--mouse-color1', 'rgba(125,211,252,0.2)');
+    doc.style.setProperty('--mouse-color2', 'rgba(110, 231, 183,0.2)');
 
     
   }
