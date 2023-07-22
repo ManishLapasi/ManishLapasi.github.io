@@ -1,10 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Stats, Reflector } from "@react-three/drei";
-import { Html, Text, Line, RoundedBox, Box } from "@react-three/drei";
-import { Euler, Vector3, Color } from "three";
 import "./PokeCards.css";
-import { MeshReflectorMaterial } from "@react-three/drei/materials/MeshReflectorMaterial";
 
 
 const myskills = [
@@ -136,18 +131,20 @@ const myskills = [
   },
 ]
 
+const animDuration = 12 * 1000;
+
 const Card = () => {
 
     let [obj, setObj] = useState(myskills[0]);
-    let [id, setId] = useState(0)
+    let [id, setId] = useState(0);
 
     ///*    
     useEffect(() => {setTimeout(() => {
-      console.log(id);
+      //console.log(id);
       setObj(myskills[id]);
-      if (id==myskills.length-1) {setId(0);}
+      if (id===myskills.length-1) {setId(0);}
       else {setId(id+1);}
-    }, 3000)}, [id])
+    }, animDuration)}, [id])
     //*/
 
     return (
@@ -159,10 +156,10 @@ const Card = () => {
             <p className="skillType">{obj.type}</p>
             <div className="nameYoe">
               <p className="skillName">{obj.name}</p>
-              <p className="yoe">{obj.yoe}</p>
+              <p className="yoe"><span>YoE </span>{obj.yoe}</p>
             </div>
             <div className="imgContainer">
-              <img className="skillImg" src={"./skill_imgs/"+obj.img_loc}></img>
+              <img className="skillImg" src={"./skill_imgs/"+obj.img_loc} alt="Logo"></img>
             </div>
             <div className="skillDesc">{obj.summ}</div>
             <p className="techIKnow">Tech-I-Know</p>

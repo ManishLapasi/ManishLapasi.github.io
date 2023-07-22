@@ -1,13 +1,53 @@
 body {
   margin: 0;
-  font-family: 'IBM Plex Sans';
+  font-family: 'League Spartan', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(255, 255, 255);
   color: black;
+  font-size: calc(0.75em + 1vmin);
+  
+  --top-bg-color: white;
+  --top-text-color: black;
+  --color1: #7dd3fc;
+  --color2: #6ee7b7;
+  --color3: #7eb4e0;
+  --color4: #6ee7b7;
+  --card-color1: #03a9f4;
+  --card-color2: #ff0058;
+  --card-desc-bg-color: rgb(240,248,255);
+  --card-border-color: rgb(240, 210, 130);
+  --card-border-box-shadow: rgba(0,0,0,0.2);
+  
+  transition: all 1s;
+
 }
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar {
+  width: 80vw;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 0.5fr 0.2fr 0.2fr 0.2fr 0.1fr;
+  font-size: calc(0.5em + 0.75vmin);
+  align-items: center;
+}
+
+.navbar > a {
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  height: auto;
+}
+
+#toggler svg {
+  width: 1em;
+  height: 1em;
 }

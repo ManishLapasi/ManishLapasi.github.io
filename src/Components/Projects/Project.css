@@ -1,0 +1,59 @@
+.projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 80vw;
+    margin: 2%;
+}
+
+.projectCard {
+    position: relative;
+    min-width: 300px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+    --cx: 0px;
+    --cy: 0px;
+}
+
+.projectCard:hover {
+    box-shadow: 0px 1px 1px 0px black;
+    mask-image: radial-gradient(at var(--cx) var(--cy), white 0%, transparent 300%);
+
+}
+
+.projectInfo {
+    padding-top: 30%;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+    background-image: linear-gradient(transparent, black);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+
+}
+
+.projectTitle {
+    text-align: left;
+    background-color: aliceblue;
+    color: rgb(46, 189, 194);
+    width: fit-content;
+}
+
+.projectDesc {
+    font-size: clamp(12px,calc(0.55em + 0.7vmin));
+    text-align: left;
+    height: 2em;
+}
+
+.projectSkill {
+    display: inline-block;
+    font-size: clamp(12px,calc(0.55em + 0.7vmin));
+    border-radius: 2px;
+    background-color: antiquewhite;
+    width: fit-content;
+    color: black;
+}

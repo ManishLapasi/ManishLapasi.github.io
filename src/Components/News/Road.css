@@ -1,0 +1,36 @@
+.eventsContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-radius: 5px;
+    width: 80vw;
+    margin: 2%;
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.myEvent {
+    display: grid;
+    grid-template-columns: 15vw 60vw;
+    padding: 5px;
+    font-size: calc(0.5em + 0.7vmin);
+}
+
+.eventDesc {
+    white-space: pre;
+}
+
+.eventsContainer::-webkit-scrollbar {
+    background-color: transparent;
+    border-radius: 10px;
+    width: calc(0.25em + 0.25vw);
+    height: calc(0.25em + 0.25vw);
+}
+
+.eventsContainer::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 10px;
+    width: calc(0.25em + 0.25vw);
+    height: calc(0.25em + 0.25vw);
+
+}
