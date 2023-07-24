@@ -7,14 +7,14 @@ const myskills = [
     name:"Python",
     type: "Language",
     yoe: "3+",
-    summ: "Everybody's friendly neighborhood programming language.",
+    summ: "Everybody's friendly neighborhood programming language",
     img_loc: "python.png"
   },
   {
     name:"C++", 
     type: "Language",
     yoe: "3+",
-    summ: "If you look deep enough, there's a lot of C++ under most hoods.",
+    summ: "If you look deep enough, there's a lot of C++ under most hoods",
     img_loc: "cpp.png"
   },
   {
