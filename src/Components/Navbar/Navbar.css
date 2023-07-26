@@ -1,0 +1,22 @@
+.navbar {
+    width: 80vw;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    font-size: calc(0.5em + 0.75vmin);
+    align-items: center;
+  }
+  
+  .navbar > a {
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+    height: auto;
+  }
+  
+  #toggler svg {
+    width: 1em;
+    height: 1em;
+  }

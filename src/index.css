@@ -33,29 +33,6 @@ code {
     monospace;
 }
 
-.navbar {
-  width: 80vw;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 0.5fr 0.2fr 0.2fr 0.2fr 0.1fr;
-  font-size: calc(0.5em + 0.75vmin);
-  align-items: center;
-}
-
-.navbar > a {
-  text-decoration: none;
-  color: inherit;
-  text-align: left;
-  height: auto;
-}
-
-#toggler svg {
-  width: 1em;
-  height: 1em;
-}
-
 body::-webkit-scrollbar {
   background-color: transparent;
   border-radius: 10px;
@@ -69,12 +46,4 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   width: calc(0.25em + 0.25vw);
   height: calc(0.25em + 0.25vw);
-}
-
-.rounded{
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--top-text-color);
-  border-radius: 50%;
-  pointer-events: none;
 }
