@@ -8,6 +8,9 @@ let pointerProps = {
     r: pointer_r_from,
 }
 let mousePos = {x:-100, y:-100}
+let maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+console.log(document.documentElement.offsetHeight)
+console.log(maxScrollTop);
 
 function dist_between(p1, p2) {
     return Math.abs(p1.x-p2.x)+Math.abs(p1.y-p2.y);
@@ -116,6 +119,7 @@ window.addEventListener('resize', () => {
         cvs.height = window.innerHeight;
         generate_points();
         get_active_points();
+        maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
     }
 })
 
@@ -123,9 +127,9 @@ window.addEventListener('scroll', (e) => {
     //console.log(document.documentElement.scrollTop)
     let cvs = document.getElementById('mycanvas');
     if (cvs!==null && cvs!==undefined){
-        console.log(cvs, cvs===null);
-        cvs.style.top = `${document.documentElement.scrollTop}px`;
-        cvs.style.left = `${document.documentElement.scrollLeft}px`;
+        let t = Math.min(document.documentElement.scrollTop, maxScrollTop)
+        console.log(cvs, cvs===null, t);
+        cvs.style.top = `${t}px`;
     }
 })
 
@@ -142,6 +146,8 @@ function Canvas({themeColor}) {
             yoyo: true
         })
         animate();
+        maxScrollTop = document.documentElement.scrollHeight - window.innerHeight;
+        console.log(maxScrollTop);
     }, [cvs]);
 
     return (
