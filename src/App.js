@@ -11,11 +11,14 @@ function App() {
   const summaryText = "A software engineer who loves building things for the web, and ensuring they are reliably and scalably performant."
   const abstractText = "I'm currently pursuing my Master's in Computer Science at Georgia Tech, where I'm majoring in ML / AI and Computing Systems."
 
-  const [color, setColor] = useState("156,217,249")
+  const [color, setColor] = useState("156,217,249");
+
+  var supportsTouch = 'ontouchstart' in window;
+  console.log("touch?", supportsTouch)
 
   return (
     <div>
-      <Canvas themeColor={color}/>
+      {!supportsTouch && <Canvas themeColor={color}/>}
       <Navbar setColor={setColor}/>
       <div className="App">
         <div className="pageOne" style={{display: "flex", flexFlow: "row wrap", justifyContent: "space-around", rowGap: "10vh"}}>
