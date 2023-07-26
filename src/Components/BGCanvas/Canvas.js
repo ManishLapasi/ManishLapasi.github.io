@@ -115,7 +115,7 @@ window.addEventListener('mousemove', (e) => {
 window.addEventListener('resize', () => {
     let cvs = document.getElementById("mycanvas");
     if (cvs!==null && cvs!==undefined){
-        cvs.width = window.innerWidth;
+        cvs.width = window.innerWidth-10;
         cvs.height = window.innerHeight;
         generate_points();
         get_active_points();
@@ -151,7 +151,7 @@ function Canvas({themeColor}) {
     }, [cvs]);
 
     return (
-        <canvas id="mycanvas" width={window.innerWidth} height={window.innerHeight} ref={cvs}/>
+        <canvas id="mycanvas" width={window.innerWidth-10} height={window.innerHeight} ref={cvs}/>
     )
 }
 
