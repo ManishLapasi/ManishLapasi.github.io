@@ -96,7 +96,7 @@ function animate() {
     })
     ctx.beginPath();
     ctx.arc(mousePos.x, mousePos.y, pointerProps.r, 0, 2*Math.PI);
-    ctx.fillStyle = `rgba(${color},0.2)`;
+    ctx.fillStyle = `rgba(${color},0.7)`;
     ctx.fill();
     //console.log('animating');
     requestAnimationFrame(animate);
@@ -104,16 +104,29 @@ function animate() {
 
 
 window.addEventListener('mousemove', (e) => {
-    mousePos = {x:e.clientX, y:e.clientY-20};
+    //console.log(e);
+    mousePos = {x:e.clientX, y:e.clientY};
     get_active_points();
 })
 
 window.addEventListener('resize', () => {
     let cvs = document.getElementById("mycanvas");
-    cvs.width = window.innerWidth;
-    cvs.height = window.innerHeight;
-    generate_points();
-    get_active_points();
+    if (cvs!==null && cvs!==undefined){
+        cvs.width = window.innerWidth;
+        cvs.height = window.innerHeight;
+        generate_points();
+        get_active_points();
+    }
+})
+
+window.addEventListener('scroll', (e) => {
+    //console.log(document.documentElement.scrollTop)
+    let cvs = document.getElementById('mycanvas');
+    if (cvs!==null && cvs!==undefined){
+        console.log(cvs, cvs===null);
+        cvs.style.top = `${document.documentElement.scrollTop}px`;
+        cvs.style.left = `${document.documentElement.scrollLeft}px`;
+    }
 })
 
 function Canvas({themeColor}) {
