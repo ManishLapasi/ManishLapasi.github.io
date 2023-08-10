@@ -1,10 +1,9 @@
 .navbar {
-    width: 80vw;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 0.5fr 0.2fr 0.2fr 0.2fr 0.1fr;
+    grid-template-columns: 0.4fr 0.15fr 0.15fr 0.15fr 0.15fr;
     font-size: calc(0.5em + 0.75vmin);
     align-items: center;
   }
@@ -16,6 +15,10 @@
     height: auto;
   }
   
+  #toggler {
+    text-align: center;
+  }
+
   #toggler svg {
     width: 1em;
     height: 1em;

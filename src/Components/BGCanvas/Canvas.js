@@ -2,7 +2,7 @@ import './Canvas.css';
 import {useRef, useEffect} from "react";
 import {gsap, Circ} from 'gsap';
 
-let points = [], activepoints = [], color = "156,217,249";
+let points = [], activepoints = [], color = "156,217,249", moveDist = 30;
 let pointer_r_from = 10, pointer_r_to = 20;
 let pointerProps = {
     r: pointer_r_from,
@@ -44,7 +44,7 @@ function generate_points() {
         for(let j=0; j<h; j=j+h/numPoints) {
             var px = i + Math.random()*w/numPoints;
             var py = j + Math.random()*h/numPoints;
-            var p = {x: px, originX: px, y: py, originY: py, active: 0 };
+            var p = {x: px, originX: px, y: py, originY: py, active: 0, flag: 1};
             points.push(p);
         }
     }
@@ -66,12 +66,13 @@ function shiftPoints(p) {
     p.shifted = true;
     gsap.to(p, {
         duration: 1+1*Math.random(), 
-        x: p.originX+50-Math.random()*50, 
-        y: p.originY+50-Math.random()*50, 
+        x: p.originX+p.flag*moveDist-p.flag*Math.random()*moveDist, 
+        y: p.originY+p.flag*moveDist-p.flag*Math.random()*moveDist, 
         ease: Circ.easeIn,
         yoyo: true,
         onComplete: () => {
             p.shifted = false; 
+            p.flag = -p.flag;
             shiftPoints(p);
         }
     });

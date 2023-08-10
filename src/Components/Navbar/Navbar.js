@@ -63,7 +63,7 @@ function Navbar({setColor}) {
             <a href='#s1'>Work</a>
             <a href='#s2'>Projects</a>
             <a href='#s3'>Timeline</a>
-            <div id="toggler" style={{textAlign: "left"}} onClick={() => handleClick(setColor)} on>
+            <div id="toggler" onClick={() => handleClick(setColor)} on>
             <svg viewBox="0 0 24 24">
                 <circle cx="11.9998" cy="11.9998" r="5.75375" style={{fill: "currentColor", transformOrigin:"11.999799728393555px 11.999799728393555px"}}></circle>
                 <g transform-origin="11.99996030330658px 11.999765396118164px" style={{transformOrigin: "12px 11.9998px"}}>
