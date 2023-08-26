@@ -22,7 +22,7 @@ function App() {
       <Navbar setColor={setColor}/>
       <div className="App">
         <div className="pageOne" style={{display: "flex", flexFlow: "row wrap", justifyContent: "space-around", rowGap: "10vh"}}>
-          <div style={{flexBasis: "50%", flexGrow: 0, display: "flex", flexFlow: "column", justifyContent: "space-around",  rowGap: "10vh"}}>
+          <div style={{flexBasis: "40%", flexGrow: 0, display: "flex", flexFlow: "column", justifyContent: "space-around",  rowGap: "10vh"}}>
             <div className='introBox'>
                 Hello there, I'm
                 <div className="coloredText">
