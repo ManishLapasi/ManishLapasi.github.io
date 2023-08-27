@@ -13,8 +13,21 @@
     color: inherit;
     text-align: left;
     height: auto;
+    transition: all 0.2s;
   }
-  
+
+  .navbar > div > a {
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+    height: auto;
+    transition: all 0.2s;
+  }
+
+  .navbar > a:hover {
+    font-size: larger;
+  }
+
   #toggler {
     text-align: center;
   }
@@ -23,3 +36,9 @@
     width: 1em;
     height: 1em;
   }
+
+@media screen and (max-width:500px) {
+  .navbar {
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+  }
+}
