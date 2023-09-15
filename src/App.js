@@ -63,6 +63,7 @@ function App() {
         <div style={{marginBottom: "10vh"}} id="timelineDiv">
           <Roads/>
         </div>
+        <div className="heading" id="s4">Click <a href="https://drive.google.com/file/d/1CN0BS5TtZ3xLGfCIiYqnOUOJfpqROP_W/view?usp=drive_link" target="_blank" rel="noopener noreferrer">here</a> to view all this as a PDF resume!</div>
       </div>
     </div>
   );
