@@ -1,0 +1,124 @@
+.logoIcon {
+    position: relative;
+    border: 3px transparent lime;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 0rem;
+    align-items: center;
+    min-width: 30px;
+}
+
+.logoImg {
+    --perspective: 70px;
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    flex-grow: 1;
+
+    padding: 2%;
+
+    transform: 
+        perspective(var(--perspective))
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY));
+
+    transition: all 400ms;
+}
+
+.skill-text {
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    font-size: calc(0.5em + 0.5vmin);
+}
+
+.mouse-pointer-logo {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    opacity: 0.2;
+}
+
+.child-logo0:hover ~ .logoImg {
+    --rotateX: 15deg;
+}
+
+.child-logo1:hover ~ .logoImg {
+    --rotateX: 15deg;
+    --rotateY: -15deg;
+}
+
+.child-logo2:hover ~ .logoImg {
+    --rotateX: 15deg;
+    --rotateY: 15deg;
+}
+
+.child-logo3:hover ~ .logoImg {
+    --rotateX: 0deg;
+}
+
+.child-logo4:hover ~ .logoImg {
+    --rotateY: -15deg;
+}
+
+.child-logo5:hover ~ .logoImg {
+    --rotateY: 15deg;
+}
+
+.child-logo6:hover ~ .logoImg {
+    --rotateX: -15deg;
+}
+
+.child-logo7:hover ~ .logoImg {
+    --rotateX: -15deg;
+    --rotateY: -15deg;
+}
+
+.child-logo8:hover ~ .logoImg {
+    --rotateX: -15deg;
+    --rotateY: 15deg;
+}
+
+
+/* last column */
+.mouse-pointer-logo:nth-of-type(3n) {
+    grid-column: 3/4;
+}
+
+/* middle column */
+.mouse-pointer-logo:nth-of-type(3n+1) {
+    grid-column: 2/3;
+}
+
+/* first column */
+.mouse-pointer-logo:nth-of-type(3n+2) {
+    grid-column: 1/2;
+}
+
+/* first row */
+.mouse-pointer-logo:nth-child(n+1):nth-child(-n+3){
+    grid-row: 1/2;
+}
+
+/* middle row */
+.mouse-pointer-logo:nth-child(n+4):nth-child(-n+6) {
+    grid-row: 2/3;
+}
+
+/* last row */
+.mouse-pointer-logo:nth-child(n+7):nth-child(-n+9) {
+    grid-row: 3/4;
+}
+
+
+.img-element {
+    height: 5vh;
+    aspect-ratio: 1;
+}

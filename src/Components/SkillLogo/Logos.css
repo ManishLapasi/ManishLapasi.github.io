@@ -1,0 +1,24 @@
+.Logos {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom right, var(--color1), var(--color2));
+    box-shadow: 1px 2px 2px 2px var(--card-border-box-shadow);
+    width: 100%;
+    border-radius: 20px;
+    padding: 2%;
+    margin: 1%;
+    transition: all 1s;
+}
+
+.LogoRow {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    justify-content: space-around;
+}
+
+.Skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

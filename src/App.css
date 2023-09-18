@@ -1,9 +1,11 @@
 .App {
   text-align: left;
   width: 80vw;
-  margin: 10%;
+  margin: 5%;
+  margin-right: 2%;
+  margin-top: 5%;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   scroll-behavior: smooth;
 }
 
@@ -11,10 +13,12 @@
   display: flex;
   flex-flow: row wrap;
   margin-bottom: 10vh;
+  justify-content: space-evenly;
 }
 
 .heading {
   font-family: 'League Spartan', sans-serif;
+  position: relative;
   font-size: 2rem;
   padding-top: 5%;
 }
@@ -133,3 +137,22 @@
   text-shadow: 0 0 15px rgb(134, 41, 41);
   color: rgb(134, 41, 41);
 }
+
+.techbars {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.skills {
+  padding-top: 2px; /* Add top padding */
+}
+
+.skillbar {
+  background-color: var(--top-text-color); 
+}
+
+
+.back-end {width: 80%; background-image: linear-gradient(to bottom right, var(--color1), var(--color2));} /* Green */
+.front-end {width: 60%; background-image: linear-gradient(to bottom right, var(--color1), var(--color2));} /* Blue */
+.sre {width: 80%; background-image: linear-gradient(to bottom right, var(--color1), var(--color2));} /* Red */
+.devops {width: 60%; background-image: linear-gradient(to bottom right, var(--color1), var(--color2));} /* Dark Grey */

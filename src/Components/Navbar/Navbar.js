@@ -12,9 +12,9 @@ const handleClick = (setColor) => {
   if (curr==='light'){
     curr = 'dark';
     ele.innerHTML = dark;
-    doc.style.setProperty('background-color', 'rgb(28,28,30)');
+    doc.style.setProperty('background-color', 'rgb(38,38,40)');
     doc.style.setProperty('color', 'white');
-    doc.style.setProperty('--top-bg-color', 'rgb(28,28,30)');
+    doc.style.setProperty('--top-bg-color', 'rgb(38,38,40)');
     doc.style.setProperty('--top-text-color', 'white');
     
     doc.style.setProperty('--color1', '#231557');

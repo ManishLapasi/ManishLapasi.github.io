@@ -5,6 +5,7 @@ import Projects from "./Components/Projects/Project";
 import Roads from "./Components/News/Road";
 import Canvas from './Components/BGCanvas/Canvas';
 import Navbar from "./Components/Navbar/Navbar";
+import SkillSection from "./Components/SkillLogo/SkillSection";
 import './App.css'
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
       {!supportsTouch && <Canvas themeColor={color}/>}
       <Navbar setColor={setColor}/>
       <div className="App">
-        <div className="pageOne" style={{display: "flex", flexFlow: "row wrap", justifyContent: "space-around", rowGap: "10vh"}}>
-          <div style={{flexBasis: "40%", flexGrow: 0, display: "flex", flexFlow: "column", justifyContent: "space-around",  rowGap: "10vh"}}>
+        <div className="pageOne" style={{display: "flex", flexFlow: "row wrap", alignSelf: "center", justifyContent: "space-evenly", rowGap: "10vh", columnGap: "8vw"}}>
+          <div style={{flexBasis: "40%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "10vh"}}>
             <div className='introBox'>
                 Hello there, I'm
                 <div className="coloredText">
@@ -36,7 +37,30 @@ function App() {
             </div>
             <div className='summary'>{summaryText}</div>
             <div className='summary'>{abstractText}</div>
-            <div class="socIcons">
+          </div>
+          <div class="techbars boxed">
+              <p>Backend</p>
+              <div class="skillbar" id="back-end">
+                <div class="skills back-end"></div>
+              </div>
+
+              <p>Frontend</p>
+              <div class="skillbar" id="front-end">
+                <div class="skills front-end"></div>
+              </div>
+
+              <p>Reliability</p>
+              <div class="skillbar" id="sre">
+                <div class="skills sre"></div>
+              </div>
+
+              <p>DevOps</p>
+              <div class="skillbar" id="devops">
+                <div class="skills devops"></div>
+              </div>
+              <h1></h1>
+              <h1></h1>
+              <div class="socIcons">
               <span class="fa-stack fa-2x">
                   <i class="fa fa-circle fa-stack-2x icon-background" id="linkedin-circle"></i>
                   <a href="http://linkedin.com/in/manikandanlp"  target="_blank" rel="noopener noreferrer" class="fa fa-linkedin fa-stack-1x" aria-hidden="true"> </a>
@@ -47,10 +71,9 @@ function App() {
               </span>
             </div>
           </div>
-          <div style={{flexBasis: "50%", flexGrow: 0, alignItems: "center", animation: "1s anim-lineUp 200ms ease-out forwards"}}>
-            <Cards/>  
-          </div>  
         </div>
+        <div className="heading" id="s5">Skills</div>
+        <SkillSection />
         <div className="heading" id="s1">Places I've worked at</div>
         <div style={{marginBottom: "10vh"}}>
           <WorkExp />
