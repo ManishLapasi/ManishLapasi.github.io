@@ -2,10 +2,11 @@
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 0.3fr 0.13fr 0.13fr 0.13fr 0.13fr 0.13fr;
+    display: flex;
+    flex-direction: row;
     font-size: calc(0.5em + 0.75vmin);
     align-items: center;
+    justify-content: space-evenly;
   }
   
   .navbar > a {
@@ -36,9 +37,3 @@
     width: 1em;
     height: 1em;
   }
-
-@media screen and (max-width:500px) {
-  .navbar {
-    grid-template-columns: 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr 0.15fr;
-  }
-}
