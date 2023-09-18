@@ -19,7 +19,7 @@ const SkillSection = () => {
             <div style={{width: "30vw", minWidth: "300px" ,animation: "1s anim-lineUp 200ms ease-out forwards"}}>
                 <Logos setCurrskill={setCurrskill}/>  
             </div>
-            <div style={{marginTop: "5vh"}}>
+            <div style={{marginTop: "5vh",animation: "1s anim-lineUp 200ms ease-out forwards"}}>
                 <SkillCard skillInfo={currskill}/>
             </div>
         </div>

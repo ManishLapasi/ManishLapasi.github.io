@@ -1,6 +1,5 @@
 import { useState } from "react";
 import WorkExp from "./Components/Exp/WorkExp";
-import Cards from "./Components/LP/PokeCards";
 import Projects from "./Components/Projects/Project";
 import Roads from "./Components/News/Road";
 import Canvas from './Components/BGCanvas/Canvas';
@@ -58,9 +57,7 @@ function App() {
               <div class="skillbar" id="devops">
                 <div class="skills devops"></div>
               </div>
-              <h1></h1>
-              <h1></h1>
-              <div class="socIcons">
+              <div class="socIcons" style={{marginTop: "10%"}}>
               <span class="fa-stack fa-2x">
                   <i class="fa fa-circle fa-stack-2x icon-background" id="linkedin-circle"></i>
                   <a href="http://linkedin.com/in/manikandanlp"  target="_blank" rel="noopener noreferrer" class="fa fa-linkedin fa-stack-1x" aria-hidden="true"> </a>
@@ -72,21 +69,21 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="heading" id="s5">Skills</div>
+        <div className="heading" id="s1">Skills</div>
         <SkillSection />
-        <div className="heading" id="s1">Places I've worked at</div>
+        <div className="heading" id="s2">Places I've worked at</div>
         <div style={{marginBottom: "10vh"}}>
           <WorkExp />
         </div>
-        <div className="heading" id="s2">Things I've built</div>
+        <div className="heading" id="s3">Things I've built</div>
         <div style={{marginBottom: "10vh"}}>
           <Projects/>
         </div>
-        <div className="heading" id="s3">The road so far</div>
+        <div className="heading" id="s4">The road so far</div>
         <div style={{marginBottom: "10vh"}} id="timelineDiv">
           <Roads/>
         </div>
-        <div className="heading" id="s4">Click <a href="https://drive.google.com/file/d/17lWjvKNVDRuwKGCXxR1L7O2Dqv0Yxr77/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to view all this as a PDF resume!</div>
+        <div className="heading" id="s5">Click <a href="https://drive.google.com/file/d/17lWjvKNVDRuwKGCXxR1L7O2Dqv0Yxr77/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to view all this as a PDF resume!</div>
       </div>
     </div>
   );

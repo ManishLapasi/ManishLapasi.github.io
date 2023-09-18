@@ -141,6 +141,8 @@
 .techbars {
   width: 30vw;
   min-width: 300px;
+  animation: 1s anim-lineUp ease-out forwards;
+
 }
 
 .skills {
