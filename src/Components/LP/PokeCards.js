@@ -150,7 +150,6 @@ const Card = () => {
     return (
       <div className="tiltCard">
         {[...Array(9)].map((_,i) => <div className={"mouse-pointer child"+i.toString()} />)}
-        <div className="shineBox"></div>
         <div className="pokemonCard">
           <div className="cardBody">
             <p className="skillType">{obj.type}</p>
