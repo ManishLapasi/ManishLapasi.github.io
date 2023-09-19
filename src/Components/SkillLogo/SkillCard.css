@@ -44,17 +44,17 @@
 }
 
 .skillchild0:hover ~ .skillpokemonCard {
-    --rotateX: 15deg;
+    --rotateX: 10deg;
 }
 
 .skillchild1:hover ~ .skillpokemonCard {
-    --rotateX: 15deg;
-    --rotateY: -15deg;
+    --rotateX: 10deg;
+    --rotateY: -10deg;
 }
 
 .skillchild2:hover ~ .skillpokemonCard {
-    --rotateX: 15deg;
-    --rotateY: 15deg;
+    --rotateX: 10deg;
+    --rotateY: 10deg;
 }
 
 .skillchild3:hover ~ .skillpokemonCard {
@@ -62,25 +62,25 @@
 }
 
 .skillchild4:hover ~ .skillpokemonCard {
-    --rotateY: -15deg;
+    --rotateY: -10deg;
 }
 
 .skillchild5:hover ~ .skillpokemonCard {
-    --rotateY: 15deg;
+    --rotateY: 10deg;
 }
 
 .skillchild6:hover ~ .skillpokemonCard {
-    --rotateX: -15deg;
+    --rotateX: -10deg;
 }
 
 .skillchild7:hover ~ .skillpokemonCard {
-    --rotateX: -15deg;
-    --rotateY: -15deg;
+    --rotateX: -10deg;
+    --rotateY: -10deg;
 }
 
 .skillchild8:hover ~ .skillpokemonCard {
-    --rotateX: -15deg;
-    --rotateY: 15deg;
+    --rotateX: -10deg;
+    --rotateY: 10deg;
 }
 
 
