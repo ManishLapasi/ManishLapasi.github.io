@@ -104,6 +104,10 @@
   color: rgb(134, 41, 41);
 }
 
+.imgsection {
+  animation: 1s anim-lineUp 200ms ease-out forwards;
+}
+
 .myimg {
   width: 80%;
   height: 80vh;

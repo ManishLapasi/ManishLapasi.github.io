@@ -25,21 +25,21 @@ function handleMouseMove(event) {
     var eyecenter = {x: bcr.left + eyewidth/2, y: bcr.top + eyeheight/2}
     //console.log(bcr, eyecenter);
     if(event.pageX < eyecenter.x) {
-        eyes[0].setAttribute("cx", 13213.3 + (1-event.pageX/eyecenter.x)*eyewidth)
-        eyes[1].setAttribute("cx", 11037 + (1-event.pageX/eyecenter.x)*eyewidth)
+        eyes[0].setAttribute("cx", 13213.3 +  Math.min((1-event.pageX/eyecenter.x)*eyewidth), eyewidth*2)
+        eyes[1].setAttribute("cx", 11037 +  Math.min((1-event.pageX/eyecenter.x)*eyewidth), eyewidth*2)
     }
     else {
-        eyes[0].setAttribute("cx", 13213.3 - ((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth))
-        eyes[1].setAttribute("cx", 11037 - ((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth))
+        eyes[0].setAttribute("cx", 13213.3 -  Math.min(((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth)), eyewidth*2)
+        eyes[1].setAttribute("cx", 11037 -  Math.min(((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth)), eyewidth*2)
     }
     if(event.pageY < eyecenter.y) {
-        eyes[0].setAttribute("cy", 15030.7 + (1-event.pageY/eyecenter.y)*eyeheight)
-        eyes[1].setAttribute("cy", 15030.7 + (1-event.pageY/eyecenter.y)*eyeheight)
+        eyes[0].setAttribute("cy", 15030.7 + Math.min((1-event.pageY/eyecenter.y)*eyeheight), eyeheight*2)
+        eyes[1].setAttribute("cy", 15030.7 +  Math.min((1-event.pageY/eyecenter.y)*eyeheight), eyeheight*2)
 
     }
     else {
-        eyes[0].setAttribute("cy", 15030.7 - ((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight))
-        eyes[1].setAttribute("cy", 15030.7 - ((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight))
+        eyes[0].setAttribute("cy", 15030.7 -  Math.min(((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight)), eyeheight*2)
+        eyes[1].setAttribute("cy", 15030.7 -  Math.min(((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight)), eyeheight*2)
     }
 }
 
@@ -72,8 +72,9 @@ const LandingPage = () => {
               </span>
             </div>
           </div>
-          <a href="https://www.vecteezy.com/free-vector/young-man" className="imgsection" style={{display: "flex", flexBasis: "40%", alignItems: "center", justifyContent: "center", minWidth: "400px"}} target="_blank" rel="noopener noreferrer">
+          <div className="imgsection" style={{display: "flex", flexBasis: "40%", alignItems: "center", justifyContent: "center", minWidth: "400px"}}>
             <svg minWidth="300px" id="svg2" width="2829.3333" height="2829.3333" viewBox="0 0 2829.3333 2829.3333" transform="scale(-1 1)" className="myimg">
+                <a href="https://www.vecteezy.com/free-vector/young-man"  target="_blank" rel="noopener noreferrer">
                 <g id="g8" transform="matrix(1.3333333,0,0,-1.3333333,0,2829.3333)">
                     <g id="g10" transform="scale(0.1)">
                     <path
@@ -136,8 +137,9 @@ const LandingPage = () => {
                         id="path42" />
                     </g>
                 </g>
+                </a>
             </svg>
-          </a>
+          </div>
         </div>
     )
 }
