@@ -35,7 +35,8 @@
     background-color: transparent;
   }
 
-  .App {
-    row-gap: 10vh;
+  .heading {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
   }
 }
