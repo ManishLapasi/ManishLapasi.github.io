@@ -12,6 +12,8 @@ const handleClick = (setColor) => {
   if (curr==='light'){
     curr = 'dark';
     ele.innerHTML = dark;
+    if (window.innerWidth<500){doc.style.setProperty('--bg-section-color', 'transparent');}
+    else {doc.style.setProperty('--bg-section-color', 'rgb(73, 76, 78, 0.2)');}
     doc.style.setProperty('background-color', 'rgb(38,38,40)');
     doc.style.setProperty('color', 'white');
     doc.style.setProperty('--top-bg-color', 'rgb(38,38,40)');
@@ -24,7 +26,7 @@ const handleClick = (setColor) => {
     doc.style.setProperty('--card-color1', 'rgb(0,64,221)');
     doc.style.setProperty('--card-color2', 'rgb(191,90,242)');
     doc.style.setProperty('--card-desc-bg-color', 'rgb(73, 76, 78)');
-    doc.style.setProperty('--bg-section-color', 'rgb(73, 76, 78, 0.2)');
+    
     doc.style.setProperty('--card-border-color', 'rgb(0, 0, 0)');
     doc.style.setProperty('--card-border-box-shadow', 'rgba(230,230,230,0.2)');
     doc.style.setProperty('--mouse-color1', 'rgba(35, 21, 87, 0.2)');
@@ -35,6 +37,9 @@ const handleClick = (setColor) => {
   else {
     curr = 'light';
     ele.innerHTML = light;
+    
+    if (window.innerWidth<500){doc.style.setProperty('--bg-section-color', 'transparent');}
+    else {doc.style.setProperty('--bg-section-color', 'rgba(220, 220, 220, 0.3)')}
     doc.style.setProperty('background-color', 'rgb(239,251,251)');
     doc.style.setProperty('color', 'black');
     doc.style.setProperty('--top-bg-color', 'white');
@@ -47,7 +52,7 @@ const handleClick = (setColor) => {
     doc.style.setProperty('--card-color1', '#03a9f4');
     doc.style.setProperty('--card-color2', '#ff0058');
     doc.style.setProperty('--card-desc-bg-color', 'rgb(240,248,255)');
-    doc.style.setProperty('--bg-section-color', 'rgba(220, 220, 220, 0.3)');
+    
     doc.style.setProperty('--card-border-color', 'rgb(240, 210, 130)');
     doc.style.setProperty('--card-border-box-shadow', 'rgba(0,0,0,0.2)');
     doc.style.setProperty('--mouse-color1', 'rgba(125,211,252,0.2)');

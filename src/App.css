@@ -32,6 +32,6 @@
 
 @media screen and (max-width: 500px) {
   .BGSection {
-    background-color: var(--top-bg-color);
+    background-color: transparent;
   }
 }
