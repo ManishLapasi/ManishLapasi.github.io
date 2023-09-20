@@ -9,7 +9,7 @@
 }
 
 .BGSection {
-  padding: 4%;
+  padding: 3%;
   background-color: var(--bg-section-color);
   border-radius: 2vmin;
 }
@@ -33,5 +33,9 @@
 @media screen and (max-width: 500px) {
   .BGSection {
     background-color: transparent;
+  }
+
+  .App {
+    row-gap: 10vh;
   }
 }
