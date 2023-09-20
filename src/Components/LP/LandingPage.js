@@ -20,34 +20,37 @@ window.addEventListener("resize", (event) => {
 
 function handleMouseMove(event) {
     var eyes = document.getElementsByClassName("eyes");
+    var eyebrows = document.getElementsByClassName("eyebrows");
     //console.log(eyes);
     var bcr = eyes[0].getBoundingClientRect();
     var eyecenter = {x: bcr.left + eyewidth/2, y: bcr.top + eyeheight/2}
     //console.log(bcr, eyecenter);
+    var eyebrow_pos = {x:0, y:0} ;
     if(event.pageX < eyecenter.x) {
-        eyes[0].setAttribute("cx", 13213.3 +  Math.min((1-event.pageX/eyecenter.x)*eyewidth), eyewidth*2)
-        eyes[1].setAttribute("cx", 11037 +  Math.min((1-event.pageX/eyecenter.x)*eyewidth), eyewidth*2)
+        eyebrow_pos.x = Math.min((1-event.pageX/eyecenter.x)*eyewidth, eyewidth*2)
     }
     else {
-        eyes[0].setAttribute("cx", 13213.3 -  Math.min(((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth)), eyewidth*2)
-        eyes[1].setAttribute("cx", 11037 -  Math.min(((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth)), eyewidth*2)
+        eyebrow_pos.x = -Math.min(((event.pageX-eyecenter.x)/(document.body.clientWidth-eyecenter.x)*eyewidth), eyewidth*2)
     }
     if(event.pageY < eyecenter.y) {
-        eyes[0].setAttribute("cy", 15030.7 + Math.min((1-event.pageY/eyecenter.y)*eyeheight), eyeheight*2)
-        eyes[1].setAttribute("cy", 15030.7 +  Math.min((1-event.pageY/eyecenter.y)*eyeheight), eyeheight*2)
-
+        eyebrow_pos.y = Math.min((1-event.pageY/eyecenter.y)*eyeheight, eyeheight*2)
     }
     else {
-        eyes[0].setAttribute("cy", 15030.7 -  Math.min(((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight)), eyeheight*2)
-        eyes[1].setAttribute("cy", 15030.7 -  Math.min(((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight)), eyeheight*2)
+        eyebrow_pos.y = -Math.min(((event.pageY-eyecenter.y)/(window.innerHeight-eyecenter.y)*eyeheight), eyeheight*2)
     }
+    eyes[0].setAttribute("cx", 13213.3 + eyebrow_pos.x)
+    eyes[1].setAttribute("cx", 11037 + eyebrow_pos.x)
+    eyes[0].setAttribute("cy", 15030.7 + eyebrow_pos.y)
+    eyes[1].setAttribute("cy", 15030.7 + eyebrow_pos.y)
+    eyebrows[0].setAttribute("transform", `translate(${eyebrow_pos.x/2} ${eyebrow_pos.y/2})`)
+    eyebrows[1].setAttribute("transform", `translate(${eyebrow_pos.x/2} ${eyebrow_pos.y/2})`)
 }
 
 
 const LandingPage = () => {
     return (
         <div className="pageOne" onMouseMove={(e) => handleMouseMove(e)} style={{display: "flex", flexFlow: "row wrap", alignSelf: "center", justifyContent: "space-evenly", rowGap: "10vh", columnGap: "8vw"}}>
-          <div style={{flexBasis: "40%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "10vh"}}>
+          <div style={{flexBasis: "40%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "10vh", justifyContent: "space-around"}}>
             <div className='introBox'>
                 Hello there, I'm
                 <div className="coloredText">
@@ -61,7 +64,7 @@ const LandingPage = () => {
             </div>
             <div className='summary'>{summaryText}</div>
             <div className='summary'>{abstractText}</div>
-            <div class="socIcons" style={{marginTop: "10%"}}>
+            <div class="socIcons">
               <span class="fa-stack fa-2x">
                   <i class="fa fa-circle fa-stack-2x icon-background" id="linkedin-circle"></i>
                   <a href="http://linkedin.com/in/manikandanlp"  target="_blank" rel="noopener noreferrer" class="fa fa-linkedin fa-stack-1x" aria-hidden="true"> </a>
@@ -110,11 +113,11 @@ const LandingPage = () => {
                         style={{fill:"#1e0c0e",fillOpacity:"1",fillRule:"nonzero",stroke:"none"}}
                         id="path28" 
                         className="eyes"/>
-                    <path
+                    <path className="eyebrows"
                         d="m 13788.9,15611.5 c 0,0 -4.7,11.6 -12.5,31.2 -2.9,4.6 -5.7,10.1 -8.2,16.2 -5.7,7.5 -10.7,15.2 -17.2,24.1 -12.4,17.2 -27.6,36.7 -44,51.1 -16.9,17.3 -36.6,34 -59.4,48.7 -22.7,16.1 -47.6,28.4 -75.2,40.7 -26.9,9.4 -56.2,20.8 -86,26 -30,6.7 -61.8,7.6 -92.6,10.3 -63.8,-1.2 -125.3,-12.7 -180.5,-35.2 -26.8,-13.1 -52.9,-24 -74.7,-40.8 -23,-14.7 -43,-30.9 -58.4,-48.4 -18.9,-15.7 -31.8,-32.9 -42.2,-48.9 -12.3,-14.6 -20.8,-29 -26.5,-41.5 -11.9,-24.3 -16.8,-38.3 -16.8,-38.3 -17.6,-46.3 4.9,-98.1 51.5,-115.8 26.2,-9.7 54.1,-6.8 77.3,6.4 l 22.6,13.9 c 0,0 9.3,5.1 20.7,14.2 13.3,9.8 31.9,20.7 54,32.2 11.2,5.7 23,10.9 35.5,15.6 13.3,6.1 28.7,7.8 42.6,13.6 14.7,2.1 29.7,7 46.2,8 16,4 31.9,1.8 48.7,4.4 32.9,-0.4 65.1,-4.7 94.4,-11.5 13.6,-5.8 29.8,-6.7 43.1,-13.1 12.8,-5.3 24.9,-9.8 36.4,-16.4 8.6,-4.9 18.6,-9.9 25.5,-13.9 5.3,-1.6 7.8,-4 12.1,-5.5 4.7,-3.6 10,-7.8 12.8,-11.4 15.8,-13.9 25.8,-21.5 25.8,-21.5 39.4,-33 97.4,-28.3 130.4,10.7 22.5,27.1 27.5,63.7 14.6,94.9"
                         style={{fill:"#1e0c0e",fillOpacity:"1",fillRule:"nonzero",stroke:"none"}}
                         id="path30" />
-                    <path
+                    <path className="eyebrows"
                         d="m 11592.6,15611.5 c 0,0 -4.6,11.6 -13.5,31.2 -1.9,4.6 -4.3,10.1 -6.1,16.2 -5.7,7.5 -11.8,15.2 -18,24.1 -12.5,17.2 -26.4,36.7 -44,51.1 -16.8,17.3 -37.2,34 -59.4,48.7 -21.8,16.1 -48,28.4 -74.8,40.7 -27.6,9.4 -56.3,20.8 -87.1,26 -29.9,6.7 -61.1,7.6 -91.5,10.3 -62.7,-1.2 -126.4,-12.7 -181.1,-35.2 -25.8,-13.1 -52.7,-24 -74.8,-40.8 -22.3,-14.7 -43,-30.9 -58.4,-48.4 -18.2,-15.7 -31.9,-32.9 -41.9,-48.9 -12.1,-14.6 -20.7,-29 -25.7,-41.5 -11.8,-24.3 -17.6,-38.3 -17.6,-38.3 -17.2,-46.3 5.8,-98.1 51.6,-115.8 26.1,-9.7 54.3,-6.8 77.6,6.4 l 21.9,13.9 c 0,0 9.3,5.1 21.8,14.2 11.8,9.8 31.5,20.7 52.6,32.2 11.5,5.7 23.3,10.9 37.3,15.6 11.8,6.1 27.2,7.8 41.4,13.6 15.9,2.1 29.8,7 46.2,8 16.2,4 31.9,1.8 49.1,4.4 31.5,-0.4 64.5,-4.7 94.1,-11.5 14,-5.8 29.3,-6.7 42.7,-13.1 12.8,-5.3 25.4,-9.8 35.7,-16.4 9.7,-4.9 19,-9.9 27.6,-13.9 l 11,-5.5 12.7,-11.4 c 16.6,-13.9 26.4,-21.5 26.4,-21.5 38.7,-33 96.2,-28.3 129.9,10.7 23.7,27.1 27.2,63.7 14.3,94.9"
                         style={{fill:"#1e0c0e",fillOpacity:"1",fillRule:"nonzero",stroke:"none"}}
                         id="path32" />

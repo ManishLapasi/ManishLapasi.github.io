@@ -2,24 +2,23 @@
   text-align: left;
   width: 80vw;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
 }
 
-.pageOne {
-  display: flex;
-  flex-flow: row wrap;
-  margin-bottom: 10vh;
-  justify-content: space-evenly;
+.BGSection {
+  padding: 4%;
+  background-color: var(--bg-section-color);
+  border-radius: 2vmin;
 }
 
 .heading {
   font-family: 'League Spartan', sans-serif;
   position: relative;
   font-size: 2rem;
-  padding-top: 5%;
+  margin: 2%;
 }
 
 @keyframes fadeIn {

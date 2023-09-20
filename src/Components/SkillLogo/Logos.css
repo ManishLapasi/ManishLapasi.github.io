@@ -10,10 +10,14 @@
     transition: all 1s;
 }
 
+.SkillCategory {
+    margin: 2%;
+}
+
 .LogoRow {
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    height: 8vh;
     justify-content: space-around;
 }
 

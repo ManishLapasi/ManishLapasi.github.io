@@ -143,10 +143,10 @@ const myskills = [
 
 const SkillCategory = ({heading, skills, setCurrskill}) => {
     return (
-      <div>
+      <div className="SkillCategory">
         <h3>{heading}</h3>
         <div className="Logos">
-          <div className="SkillCategory">
+          <div >
             {skills.map((arr,_) => <div className="LogoRow" >{arr.map((skill, _) => LogoIcon(skill, setCurrskill))}</div> )}
           </div>
         </div>

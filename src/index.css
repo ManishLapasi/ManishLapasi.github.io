@@ -22,6 +22,7 @@ body {
   --mcy: 0px;
   --mouse-color1: rgba(125,211,252,0.2);
   --mouse-color2: rgba(110, 231, 183,0.2);
+  --bg-section-color: rgba(220, 220, 220, 0.3);
 
   transition: all 1s;
 

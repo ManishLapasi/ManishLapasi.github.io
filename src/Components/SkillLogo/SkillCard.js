@@ -3,7 +3,7 @@ import './SkillCard.css';
 
 function SkillCard({skillInfo}){
     return (
-        <div className="skilltiltCard">
+      <div className="skilltiltCard">
         {[...Array(9)].map((_,i) => <div className={"skillmouse-pointer skillchild"+i.toString()} />)}
         <div className="skillpokemonCard">
           <div className="skillcardBody">

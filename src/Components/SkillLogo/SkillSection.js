@@ -15,11 +15,11 @@ const SkillSection = () => {
     const [currskill, setCurrskill] = useState(defaultSkill);
 
     return (
-        <div className="pageOne" style={{justifyContent: "space-evenly"}}>
-            <div style={{width: "30vw", minWidth: "300px" ,animation: "1s anim-lineUp 200ms ease-out forwards"}}>
+        <div style={{display: "flex", flexFlow: "row wrap",justifyContent: "space-evenly", alignItems: "center"}}>
+            <div style={{width: "30vw", minWidth: "300px" ,animation: "1s anim-lineUp 200ms ease-out forwards", marginTop: "-5%"}}>
                 <Logos setCurrskill={setCurrskill}/>  
             </div>
-            <div style={{marginTop: "5vh",animation: "1s anim-lineUp 200ms ease-out forwards"}}>
+            <div style={{width: "30vw", minWidth: "300px" ,animation: "1s anim-lineUp 200ms ease-out forwards", display: "flex", justifyItems: "center", alignItems: "center"}}>
                 <SkillCard skillInfo={currskill}/>
             </div>
         </div>
