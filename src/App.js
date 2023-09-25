@@ -1,17 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LandingPage from "./Components/LP/LandingPage";
 import WorkExp from "./Components/Exp/WorkExp";
 import Projects from "./Components/Projects/Project";
 import Roads from "./Components/News/Road";
 import Canvas from './Components/BGCanvas/Canvas';
 import Navbar from "./Components/Navbar/Navbar";
-import SkillSection from "./Components/SkillLogo/SkillSection";
+import PadSkills from "./Components/IpadLayout/PadSkills";
 import './App.css'
 
 function App() {
   
   const [color, setColor] = useState("156,217,249");
+  
+  useEffect(() => {
+    var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    if (storedTheme) {
+      if(storedTheme==='light') {setColor("156, 217, 249")}
+      else {setColor("94,92,230")}
+    }
+  }, [])
 
+  
   var supportsTouch = 'ontouchstart' in window;
   console.log("touch?", supportsTouch)
 
@@ -25,7 +34,7 @@ function App() {
         </div>
         <div className="heading" id="s1">Skills</div>
         <div className="BGSection">
-        <SkillSection />
+          <PadSkills />
         </div>
         <div className="heading" id="s2">Places I've worked at</div>
         <div className="BGSection">

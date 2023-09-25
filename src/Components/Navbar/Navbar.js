@@ -5,34 +5,24 @@ let light = '<svg viewBox="0 0 24 24"><circle cx="11.9998" cy="11.9998" r="5.753
 let dark = '<svg viewBox="0 0 50 50"><path d="M 43.81 29.354 C 43.688 28.958 43.413 28.626 43.046 28.432 C 42.679 28.238 42.251 28.198 41.854 28.321 C 36.161 29.886 30.067 28.272 25.894 24.096 C 21.722 19.92 20.113 13.824 21.683 8.133 C 21.848 7.582 21.697 6.985 21.29 6.578 C 20.884 6.172 20.287 6.022 19.736 6.187 C 10.659 8.728 4.691 17.389 5.55 26.776 C 6.408 36.163 13.847 43.598 23.235 44.451 C 32.622 45.304 41.28 39.332 43.816 30.253 C 43.902 29.96 43.9 29.647 43.81 29.354 Z"  fill="currentColor" style={{transform: "none", "transform-origin": "24.6735px 25.3265px"}}></path></svg>'
 let curr = 'light';
 
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme) {
+  document.documentElement.setAttribute('data-theme', storedTheme);
+  curr = storedTheme;
+}
+
 const handleClick = (setColor) => {
   let ele = document.getElementById("toggler");
   let doc = document.body;
+  console.log("clicked")
+
 
   if (curr==='light'){
     curr = 'dark';
     ele.innerHTML = dark;
     if (window.innerWidth<500){doc.style.setProperty('--bg-section-color', 'transparent');}
     else {doc.style.setProperty('--bg-section-color', 'rgb(73, 76, 78, 0.2)');}
-    doc.style.setProperty('background-color', 'rgb(38,38,40)');
-    doc.style.setProperty('color', 'white');
-    doc.style.setProperty('--top-bg-color', 'rgb(38,38,40)');
-    doc.style.setProperty('--top-text-color', 'white');
-    
-    doc.style.setProperty('--color1', '#231557');
-    doc.style.setProperty('--color2', '#8f76aa');
-    doc.style.setProperty('--color3','#231557'); 
-    doc.style.setProperty('--color4','#8f76aa'); 
-    doc.style.setProperty('--card-color1', 'rgb(0,64,221)');
-    doc.style.setProperty('--card-color2', 'rgb(191,90,242)');
-    doc.style.setProperty('--card-desc-bg-color', 'rgb(73, 76, 78)');
-    
-    doc.style.setProperty('--card-border-color', 'rgb(0, 0, 0)');
-    doc.style.setProperty('--card-border-box-shadow', 'rgba(230,230,230,0.2)');
-    doc.style.setProperty('--mouse-color1', 'rgba(35, 21, 87, 0.2)');
-    doc.style.setProperty('--mouse-color2', 'rgba(143, 118, 170, 0.2)');
     setColor("94,92,230")
-
   }
   else {
     curr = 'light';
@@ -40,26 +30,10 @@ const handleClick = (setColor) => {
     
     if (window.innerWidth<500){doc.style.setProperty('--bg-section-color', 'transparent');}
     else {doc.style.setProperty('--bg-section-color', 'rgba(220, 220, 220, 0.3)')}
-    doc.style.setProperty('background-color', 'rgb(239,251,251)');
-    doc.style.setProperty('color', 'black');
-    doc.style.setProperty('--top-bg-color', 'white');
-    doc.style.setProperty('--top-text-color', 'black');
-    
-    doc.style.setProperty('--color1', '#7dd3fc');
-    doc.style.setProperty('--color2', '#6ee7b7');
-    doc.style.setProperty('--color3','#7eb4e0'); 
-    doc.style.setProperty('--color4','#6ee7b7');
-    doc.style.setProperty('--card-color1', '#03a9f4');
-    doc.style.setProperty('--card-color2', '#ff0058');
-    doc.style.setProperty('--card-desc-bg-color', 'rgb(240,248,255)');
-    
-    doc.style.setProperty('--card-border-color', 'rgb(240, 210, 130)');
-    doc.style.setProperty('--card-border-box-shadow', 'rgba(0,0,0,0.2)');
-    doc.style.setProperty('--mouse-color1', 'rgba(125,211,252,0.2)');
-    doc.style.setProperty('--mouse-color2', 'rgba(110, 231, 183,0.2)');
     setColor("156,217,249");
     
   }
+  document.documentElement.setAttribute('data-theme', curr);
 }
 
 function Navbar({setColor}) {

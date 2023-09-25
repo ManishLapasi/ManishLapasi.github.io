@@ -1,0 +1,18 @@
+.ipadBG {
+    border-radius: 5px;
+    box-shadow: 1px 4px 4px 4px var(--card-border-box-shadow);
+    padding: 2%;
+    background-color: var(--card-border-color);
+}
+
+.ipadLayout {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    row-gap: 10vh;
+    max-width: 80vw;
+    border-radius: 5px;
+    box-shadow: 1px 4px 4px 4px var(--card-border-box-shadow);
+    padding: 2%;
+    background-image: linear-gradient(to bottom right, var(--card-color1), var(--card-color2));
+}

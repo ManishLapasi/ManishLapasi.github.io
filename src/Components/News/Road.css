@@ -1,7 +1,7 @@
 .eventsContainer {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     border-radius: 5px;
     width: 75vw;
     margin: 2%;
@@ -11,7 +11,7 @@
 
 .myEvent {
     display: grid;
-    grid-template-columns: 15vw 60vw;
+    grid-template-columns: 10vw 60vw;
     padding: 5px;
     font-size: clamp(10px,calc(0.5em + 0.7vmin));
 }
