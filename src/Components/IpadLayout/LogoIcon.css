@@ -6,7 +6,6 @@
     grid-template-rows: repeat(3, 1fr);
     padding: 0rem;
     align-items: center;
-    min-width: 15vw;
 }
 
 .logoImg {
@@ -119,6 +118,7 @@
 
 
 .img-element {
-    height: 5vh;
+    width: 5vw;
+    min-width: 40px;
     aspect-ratio: 1;
 }

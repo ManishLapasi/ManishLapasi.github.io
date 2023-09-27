@@ -105,7 +105,12 @@
 }
 
 .imgsection {
-  animation: 1s anim-lineUp 200ms ease-out forwards;
+  opacity: 0;
+  animation: 1s anim-lineUp 800ms ease-out forwards;
+}
+
+.visible {
+  opacity: 1;
 }
 
 .myimg {
@@ -113,4 +118,10 @@
   height: 80vh;
   aspect-ratio: 1;
   object-fit: cover;
+}
+
+/* svg props */
+
+.svgbg{
+  fill: var(--background-color);
 }
