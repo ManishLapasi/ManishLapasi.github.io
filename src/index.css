@@ -17,17 +17,19 @@
   --mouse-color1: rgba(125,211,252,0.2);
   --mouse-color2: rgba(110, 231, 183,0.2);
   --bg-section-color: rgb(33, 36, 32);
+  --skillcolor1: rgb(125, 211, 252);
+  --skillcolor2: rgb(110, 231, 183);
 }
 
 html[data-theme='light'] {
   --background-color: #a0b4f8;
   --color: black;
-  --top-bg-color: rgb(255, 255, 255);
+  --top-bg-color: rgb(160, 181, 248);
   --top-text-color: black;
-  --color1: rgb(125, 211, 252);
-  --color2: rgb(110, 231, 183);
-  --color3: #7eb4e0;
-  --color4: #6ee7b7;
+  --color1: rgb(29, 50, 193);
+  --color2: rgb(193, 154, 29);
+  --color3: rgb(62, 82, 228);
+  --color4: rgb(29, 50, 193);
   --card-color1: #03a9f4;
   --card-color2: #ff0058;
   --card-desc-bg-color: rgb(240,248,255);
@@ -38,7 +40,9 @@ html[data-theme='light'] {
   --mouse-color1: rgba(125,211,252,0.2);
   --mouse-color2: rgba(110, 231, 183,0.2);
   --bg-section-color: #728fee80;
-  --text-decoration-color: #97d671;
+  --text-decoration-color: rgb(224, 186, 91);
+  --skillcolor2: rgb(62, 82, 228);
+  --skillcolor1: rgb(229, 190, 62);
 }
 
 html[data-theme='dark']{
@@ -59,6 +63,8 @@ html[data-theme='dark']{
   --mouse-color2: rgba(143, 118, 170, 0.2);
   --bg-section-color: #21242080;
   --text-decoration-color: palevioletred;
+  --skillcolor1: #3e288f;
+  --skillcolor2: #9e6fd1;
 }
 
 body {
