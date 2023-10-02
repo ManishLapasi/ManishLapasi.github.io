@@ -11,6 +11,9 @@ if (storedTheme) {
   curr = storedTheme;
 }
 
+var darkcolor = "173,173,255";
+var lightcolor = "32, 55, 130";
+
 const handleClick = (setColor) => {
   let ele = document.getElementById("toggler");
   let doc = document.body;
@@ -20,17 +23,13 @@ const handleClick = (setColor) => {
   if (curr==='light'){
     curr = 'dark';
     ele.innerHTML = dark;
-    if (window.innerWidth<500){doc.style.setProperty('--bg-section-color', 'transparent');}
-    else {doc.style.setProperty('--bg-section-color', 'rgb(73, 76, 78, 0.2)');}
-    setColor("94,92,230")
+    setColor(darkcolor)
   }
   else {
     curr = 'light';
     ele.innerHTML = light;
     
-    if (window.innerWidth<500){doc.style.setProperty('--bg-section-color', 'transparent');}
-    else {doc.style.setProperty('--bg-section-color', 'rgba(220, 220, 220, 0.3)')}
-    setColor("156,217,249");
+    setColor(lightcolor);
     
   }
   document.documentElement.setAttribute('data-theme', curr);

@@ -57,11 +57,11 @@ const LandingPage = () => {
         }, 1000);
     }, []);
     return (
-        <div className="pageOne" onMouseMove={(e) => handleMouseMove(e)} style={{display: "flex", flexFlow: "row wrap", alignSelf: "center", justifyContent: "space-evenly", rowGap: "10vh", columnGap: "8vw"}}>
-          <div style={{flexBasis: "40%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "10vh", justifyContent: "space-around"}}>
+        <div className="pageOne" onMouseMove={(e) => handleMouseMove(e)} style={{display: "flex", flexFlow: "row wrap", alignSelf: "center", justifyContent: "space-evenly", rowGap: "10vh", columnGap: "5vw"}}>
+          <div style={{flexBasis: "50%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "0.5vh", justifyContent: "space-evenly"}}>
             <div className='introBox'>
                 Hello there, I'm
-                <div className="coloredText">
+                <div className="coloredText" style={{fontSize: 'calc(2em + 2vmin)'}}>
                   <div>
                     {[..."Lapasi."].map((x) => <div className='nameDiv'>{x}</div>)}
                   </div>
@@ -70,8 +70,11 @@ const LandingPage = () => {
                   </div>
                 </div>
             </div>
+            <div>
             <div className='summary'>{summaryText}</div>
+            <p></p>
             <div className='summary'>{abstractText}</div>
+            </div>
             <div class="socIcons">
               <span class="fa-stack fa-2x">
                   <i class="fa fa-circle fa-stack-2x icon-background" id="linkedin-circle"></i>
@@ -83,9 +86,8 @@ const LandingPage = () => {
               </span>
             </div>
           </div>
-          <div style={{display: "flex", flexBasis: "40%", alignItems: "center", justifyContent: "center", minWidth: "400px", overflow: "hidden"}}>
-            <div width="400px" height="300px" style={{position: "relative", overflow: "hidden", height: "300px", transform: "translateY(-80px)"}}>
-            <svg width="400px" height="400px" viewBox="0 450 1800 1050" >
+          <div className="banana">
+            <svg width="100%" minWidth='400px' viewBox="200 200 1600 1500">
             <g><path className="svgbg" style={{opacity: 1}} d="M 961.5,341.5 C 1024.48,339.729 1085.48,349.895 1144.5,372C 1238.62,408.76 1320.45,463.927 1390,537.5C 1433.18,583.337 1470.18,633.67 1501,688.5C 1533.17,747.552 1555.84,810.218 1569,876.5C 1580.5,952.141 1574.84,1026.47 1552,1099.5C 1533.84,1155.31 1509.51,1208.31 1479,1258.5C 1464.85,1282.97 1449.51,1306.64 1433,1329.5C 1428.88,1332.63 1425.38,1336.3 1422.5,1340.5C 1409.34,1350.58 1395.34,1359.42 1380.5,1367C 1359.15,1376.12 1337.48,1384.45 1315.5,1392C 1281.39,1402.44 1247.06,1412.11 1212.5,1421C 1193.94,1424.65 1175.27,1427.65 1156.5,1430C 1114.16,1435.24 1071.82,1440.57 1029.5,1446C 953.36,1454.95 877.027,1456.95 800.5,1452C 753.502,1451.14 709.169,1440.14 667.5,1419C 657.156,1412.83 647.156,1406.16 637.5,1399C 618.453,1381.3 601.62,1361.8 587,1340.5C 566.306,1310.46 547.639,1279.12 531,1246.5C 507.262,1201.68 485.596,1155.68 466,1108.5C 444.99,1057.8 431.99,1005.14 427,950.5C 422.501,871.493 435.501,795.493 466,722.5C 501.143,637.375 553.31,564.542 622.5,504C 685.472,448.327 755.806,403.994 833.5,371C 874.917,355.143 917.584,345.31 961.5,341.5 Z"/></g>
             
             <g className={`imgsection ${isVisible ? 'visible': ''}`} >
@@ -112,7 +114,6 @@ const LandingPage = () => {
                 <g><path style={{opacity:0.622}} fill="#82c6b4" d="M 747.5,1449.5 C 755.362,1451.26 763.029,1453.26 770.5,1455.5C 765.087,1455.77 759.754,1455.27 754.5,1454C 751.761,1452.97 749.428,1451.47 747.5,1449.5 Z"/></g>
             </g>
             </svg>
-            </div>
           </div>
         </div>
     )

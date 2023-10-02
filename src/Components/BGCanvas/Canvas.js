@@ -2,7 +2,7 @@ import './Canvas.css';
 import {useRef, useEffect} from "react";
 import {gsap, Circ} from 'gsap';
 
-let points = [], activepoints = [], color = "156,217,249", moveDist = 30;
+let points = [], activepoints = [], color = "223, 229, 251", moveDist = 30;
 let pointer_r_from = 10, pointer_r_to = 20;
 let pointerProps = {
     r: pointer_r_from,

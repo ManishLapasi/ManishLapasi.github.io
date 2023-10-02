@@ -6,7 +6,11 @@ function WorkExpBlock({title, company, during, summary, skills, styles}) {
         <div className="expBlock" style={{...styles}}>
             <div className="bottom" />
             <div className="top">
-                <p className="titleLine">{title} @ <span className="companyName">{company}</span></p>
+                <p className="titleLine">
+                    <div className="coloredText">
+                        {[...title].map((x) => <div className='nameDiv'>{x}</div>)}
+                    </div>
+                    <span className="companyName">{company}</span></p>
                 <p>{during}</p>
                 {summary.map((line) => <p>{line}</p>)}
                 <div className="skills">

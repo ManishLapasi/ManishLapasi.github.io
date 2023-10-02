@@ -125,3 +125,20 @@
 .svgbg{
   fill: var(--background-color);
 }
+
+.banana {
+  display: flex;
+  flex-basis: 40%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 576px) {
+  .banana {
+    row-gap: 5vh;
+  }
+}

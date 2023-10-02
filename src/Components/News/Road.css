@@ -20,6 +20,10 @@
     white-space: pre;
 }
 
+.eventDesc a {
+    color: var(--text-decoration-color);
+}
+
 .eventsContainer::-webkit-scrollbar {
     background-color: transparent;
     border-radius: 10px;

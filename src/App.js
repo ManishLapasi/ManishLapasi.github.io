@@ -8,6 +8,10 @@ import Navbar from "./Components/Navbar/Navbar";
 import PadSkills from "./Components/IpadLayout/PadSkills";
 import './App.css'
 
+
+var darkcolor = "173,173,255";
+var lightcolor = "32, 55, 130";
+
 function App() {
   
   const [color, setColor] = useState("156,217,249");
@@ -15,8 +19,8 @@ function App() {
   useEffect(() => {
     var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     if (storedTheme) {
-      if(storedTheme==='light') {setColor("156, 217, 249")}
-      else {setColor("94,92,230")}
+      if(storedTheme==='light') {setColor(lightcolor)}
+      else {setColor(darkcolor)}
     }
   }, [])
 
@@ -48,7 +52,7 @@ function App() {
         <div className="BGSection" id="timelineDiv">
           <Roads/>
         </div>
-        <div className="heading" id="s5">Click <a href="https://drive.google.com/file/d/17lWjvKNVDRuwKGCXxR1L7O2Dqv0Yxr77/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to view all this as a PDF resume!</div>
+        <div className="heading" id="s5">Click <a style={{color: 'var(--text-decoration-color)'}} href="https://drive.google.com/file/d/17lWjvKNVDRuwKGCXxR1L7O2Dqv0Yxr77/view?usp=sharing" target="_blank" rel="noopener noreferrer">here</a> to view all this as a PDF resume!</div>
       </div>
     </div>
   );
