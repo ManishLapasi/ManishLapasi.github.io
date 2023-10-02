@@ -7,6 +7,7 @@
     margin: 2%;
     max-height: 40vh;
     overflow-y: scroll;
+    color: var(--eventcolor);
 }
 
 .myEvent {

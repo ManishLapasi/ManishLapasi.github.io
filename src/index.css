@@ -43,15 +43,16 @@ html[data-theme='light'] {
   --text-decoration-color: rgb(224, 186, 91);
   --skillcolor2: rgb(62, 82, 228);
   --skillcolor1: rgb(229, 190, 62);
+  --eventcolor: black;
 }
 
 html[data-theme='dark']{
-  --background-color: rgb(38,38,40);
+  --background-color: rgb(10,10,10);
   --color: white;
-  --top-bg-color: rgb(38,38,40);
+  --top-bg-color: rgb(10,10,10);
   --top-text-color: white;
   --color1: #3e288f;
-  --color2: #9e6fd1;
+  --color2: palevioletred;
   --color3: #533aad;
   --color4: #8f76aa;
   --card-color1: rgb(0,64,221);
@@ -61,10 +62,11 @@ html[data-theme='dark']{
   --card-border-box-shadow: rgba(230,230,230,0.2);
   --mouse-color1: rgba(35, 21, 87, 0.2);
   --mouse-color2: rgba(143, 118, 170, 0.2);
-  --bg-section-color: #21242080;
+  --bg-section-color: rgb(50,50,50);
   --text-decoration-color: palevioletred;
-  --skillcolor1: #3e288f;
-  --skillcolor2: #9e6fd1;
+  --skillcolor2: #3e288f;
+  --skillcolor1: palevioletred;
+  --eventcolor: rgb(232, 219, 254);
 }
 
 body {
