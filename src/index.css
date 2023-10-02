@@ -62,7 +62,7 @@ html[data-theme='dark']{
   --card-border-box-shadow: rgba(230,230,230,0.2);
   --mouse-color1: rgba(35, 21, 87, 0.2);
   --mouse-color2: rgba(143, 118, 170, 0.2);
-  --bg-section-color: rgb(50,50,50);
+  --bg-section-color: rgba(50,50,50, 0.8);
   --text-decoration-color: palevioletred;
   --skillcolor2: #3e288f;
   --skillcolor1: palevioletred;
