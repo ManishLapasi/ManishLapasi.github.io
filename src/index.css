@@ -76,7 +76,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background-color);
   color: var(--color);
-  font-size: calc(1em + 1vmin);
+  font-size: calc(0.75em + 0.9vmin);
   transition: all 1s;
 
 }
