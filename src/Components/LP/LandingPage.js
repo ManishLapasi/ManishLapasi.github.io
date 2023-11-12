@@ -58,7 +58,7 @@ const LandingPage = () => {
     }, []);
     return (
         <div className="pageOne" onMouseMove={(e) => handleMouseMove(e)} style={{display: "flex", flexFlow: "row wrap", alignSelf: "center", justifyContent: "space-evenly", rowGap: "10vh", columnGap: "5vw"}}>
-          <div style={{flexBasis: "50%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "0.5vh", justifyContent: "space-evenly"}}>
+          <div style={{flexBasis: "50%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "5vh", justifyContent: "space-evenly"}}>
             <div className='introBox'>
                 Hello there, I'm
                 <div className="coloredText" style={{fontSize: 'calc(2em + 2vmin)'}}>
