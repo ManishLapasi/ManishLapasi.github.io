@@ -2,6 +2,8 @@
 
 Built a website to showcase my developer journey.
 
+Access it live!
+
 # Deploy
 
 Standard npm github-pages deployment.
