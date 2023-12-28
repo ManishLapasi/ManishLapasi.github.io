@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import LandingPage from "./Components/LP/LandingPage";
 import WorkExp from "./Components/Exp/WorkExp";
 import Projects from "./Components/Projects/Project";
+import CourseProjects from "./Components/CourseProjects/CourseProjects";
 import Roads from "./Components/News/Road";
 import Canvas from './Components/BGCanvas/Canvas';
 import Navbar from "./Components/Navbar/Navbar";
@@ -47,6 +48,10 @@ function App() {
         <div className="heading" id="s3">Things I've built</div>
         <div className="BGSection">
           <Projects/>
+        </div>
+        <div className="heading" id="s5">Projects I've worked on</div>
+        <div className="BGSection">
+          <CourseProjects/>
         </div>
         <div className="heading" id="s4">The road so far</div>
         <div className="BGSection" id="timelineDiv">
