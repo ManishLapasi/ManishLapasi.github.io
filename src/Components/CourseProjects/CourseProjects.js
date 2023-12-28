@@ -33,7 +33,7 @@ function CourseProjects() {
             <div className="projElement">
               <button type="button" className="projButton" onClick = {() => handleActive(i)}>
                 <div style={{"display": "flex", "flex-direction":"row", "transform":"translate(0px, 5px)"}}>
-                  <a href={proj.url}><img height="32" width="32" className="cpIcon" src={`./${proj.iconType}.svg`} /></a>
+                  <a href={proj.url} target="_blank" rel="noopener noreferrer"><img height="32" width="32" className="cpIcon" src={`./${proj.iconType}.svg`} /></a>
                   <div style={{"white-space": "pre-wrap"}}>{"  "}</div>
                   <div style={{"text-align": "left"}}>{`${proj.title}`}</div>
                 </div>
@@ -47,7 +47,6 @@ function CourseProjects() {
       }
     </div>
   )
-
 }
 
 export default CourseProjects;
