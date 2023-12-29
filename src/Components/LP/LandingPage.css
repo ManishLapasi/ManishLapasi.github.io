@@ -1,3 +1,12 @@
+.pageOne {
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+  justify-content: space-evenly;
+  row-gap: 10vh;
+  column-gap: 5vw;
+}
+
 .introBox {
   font-size: 2*var(--base-font-size);
   animation: 1s anim-lineUp ease-out forwards;
@@ -138,7 +147,17 @@
 }
 
 @media screen and (max-width: 576px) {
+
+  .pageOne {
+    row-gap: 2vh;
+  }
+
+  .introBox {
+    margin-top: 5vh;
+  }
+
   .banana {
+    margin-top: 2vh;
     row-gap: 5vh;
   }
 }

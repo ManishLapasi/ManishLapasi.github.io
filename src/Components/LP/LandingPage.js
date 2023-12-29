@@ -57,7 +57,7 @@ const LandingPage = () => {
         }, 1000);
     }, []);
     return (
-        <div className="pageOne" onMouseMove={(e) => handleMouseMove(e)} style={{display: "flex", flexFlow: "row wrap", alignSelf: "center", justifyContent: "space-evenly", rowGap: "10vh", columnGap: "5vw"}}>
+        <div className="pageOne" onMouseMove={(e) => handleMouseMove(e)} >
           <div style={{flexBasis: "50%", flexGrow: 0, display: "flex", flexFlow: "column",rowGap: "5vh", justifyContent: "space-evenly"}}>
             <div className='introBox'>
                 Hello there, I'm
@@ -75,14 +75,14 @@ const LandingPage = () => {
             <p></p>
             <div className='summary'>{abstractText}</div>
             </div>
-            <div class="socIcons">
-              <span class="fa-stack fa-2x">
-                  <i class="fa fa-circle fa-stack-2x icon-background" id="linkedin-circle"></i>
-                  <a href="http://linkedin.com/in/manikandanlp"  target="_blank" rel="noopener noreferrer" class="fa fa-linkedin fa-stack-1x" aria-hidden="true"> </a>
+            <div className="socIcons">
+              <span className="fa-stack fa-2x">
+                  <i className="fa fa-circle fa-stack-2x icon-background" id="linkedin-circle"></i>
+                  <a href="http://linkedin.com/in/manikandanlp"  target="_blank" rel="noopener noreferrer" className="fa fa-linkedin fa-stack-1x" aria-hidden="true"> </a>
               </span>
-              <span class="fa-stack fa-2x">
-                  <i class="fa fa-circle fa-stack-2x icon-background" id="github-circle"></i>
-                  <a href="http://github.com/manishlapasi"  target="_blank" rel="noopener noreferrer" class="fa fa-github fa-stack-1x" aria-hidden> </a>
+              <span className="fa-stack fa-2x">
+                  <i className="fa fa-circle fa-stack-2x icon-background" id="github-circle"></i>
+                  <a href="http://github.com/manishlapasi"  target="_blank" rel="noopener noreferrer" className="fa fa-github fa-stack-1x" aria-hidden> </a>
               </span>
             </div>
           </div>
