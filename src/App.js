@@ -11,7 +11,7 @@ import './App.css'
 
 
 var darkcolor = "173,173,255";
-var lightcolor = "32, 55, 130";
+var lightcolor = "173,173,255";
 
 function App() {
   

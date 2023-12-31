@@ -1,71 +1,124 @@
 :root {
-  --background-color: rgb(255, 255, 255);
-  --color: black;
-  --top-bg-color: white;
-  --top-text-color: black;
-  --color1: rgb(125, 211, 252);
-  --color2: rgb(110, 231, 183);
-  --color3: #7eb4e0;
-  --color4: #6ee7b7;
-  --card-color1: #03a9f4;
-  --card-color2: #ff0058;
-  --card-desc-bg-color: rgb(240,248,255);
-  --card-border-color: rgb(240, 210, 130);
-  --card-border-box-shadow: rgba(0,0,0,0.2);
-  --mcx: 0px;
-  --mcy: 0px;
-  --mouse-color1: rgba(125,211,252,0.2);
-  --mouse-color2: rgba(110, 231, 183,0.2);
-  --bg-section-color: rgb(33, 36, 32);
-  --skillcolor1: rgb(125, 211, 252);
-  --skillcolor2: rgb(110, 231, 183);
-}
-
-html[data-theme='light'] {
-  --background-color: #a0b4f8;
-  --color: black;
-  --top-bg-color: rgb(160, 181, 248);
-  --top-text-color: black;
-  --color1: rgb(29, 50, 193);
-  --color2: rgb(193, 154, 29);
-  --color3: rgb(62, 82, 228);
-  --color4: rgb(29, 50, 193);
-  --card-color1: #03a9f4;
-  --card-color2: #ff0058;
-  --card-desc-bg-color: rgb(240,248,255);
-  --card-border-color: rgb(240, 210, 130);
-  --card-border-box-shadow: rgba(0,0,0,0.2);
-  --mcx: 0px;
-  --mcy: 0px;
-  --mouse-color1: rgba(125,211,252,0.2);
-  --mouse-color2: rgba(110, 231, 183,0.2);
-  --bg-section-color: #728fee80;
-  --text-decoration-color: rgb(224, 186, 91);
-  --skillcolor2: rgb(62, 82, 228);
-  --skillcolor1: rgb(229, 190, 62);
-  --eventcolor: black;
-}
-
-html[data-theme='dark']{
+  /* overall background and text */
+  
   --background-color: rgb(10,10,10);
   --color: white;
+  --bg-section-color: rgba(50,50,50, 0.8);
   --top-bg-color: rgb(10,10,10);
   --top-text-color: white;
+ 
+  /* overall tech skill bg color gradient settings*/
+
+  --skillcolor2: #3e288f;
+  --skillcolor1: palevioletred;
+  
+  /* colored text (name, intro and whatnot) */ 
+
   --color1: #3e288f;
   --color2: palevioletred;
   --color3: #533aad;
   --color4: #8f76aa;
+  
+  /* card color for ipad layout */
+
   --card-color1: rgb(0,64,221);
   --card-color2: rgb(191,90,242);
   --card-desc-bg-color: rgb(73, 76, 78);
   --card-border-color: rgb(0, 0, 0);
   --card-border-box-shadow: rgba(230,230,230,0.2);
+  
+  /* misc */
+
+  --mcx: 0px;
+  --mcy: 0px;
   --mouse-color1: rgba(35, 21, 87, 0.2);
   --mouse-color2: rgba(143, 118, 170, 0.2);
-  --bg-section-color: rgba(50,50,50, 0.8);
   --text-decoration-color: palevioletred;
+  --eventcolor: rgb(232, 219, 254);
+}
+
+html[data-theme='light'] {
+
+
+  /* overall background and text */
+  --background-color: #f5f7f8;
+  --color: black;
+  --bg-section-color: #dfd7bf80;
+  --top-bg-color: #dfd7bf;
+  --top-text-color: black;
+  
+  /* overall tech skill bg color gradient settings*/
+
+  --skillcolor2: #7743db;
+  --skillcolor1: #c3acd0;
+
+  /* colored text (name, intro and whatnot) */ 
+
+  --color1: #3e288f;
+  --color2: palevioletred;
+  --color3: #533aad;
+  --color4: #8f76aa;
+
+  /* card color for ipad layout */
+
+  --card-color1: #03a9f4;
+  --card-color2: #ff0058;
+  --card-desc-bg-color: rgb(240,248,255);
+  --card-border-color: rgb(240, 210, 130);
+  --card-border-box-shadow: rgba(0,0,0,0.2);
+  
+  /* mouse info */
+  
+  --mcx: 0px;
+  --mcy: 0px;
+  --mouse-color1: rgba(35, 21, 87, 0.2);
+  --mouse-color2: rgba(143, 118, 170, 0.2);
+  
+
+  /* misc */
+
+  --text-decoration-color: palevioletred;
+  --eventcolor: black;
+}
+
+html[data-theme='dark']{
+  
+  /* overall background and text */
+
+  --background-color: rgb(10,10,10);
+  --color: white;
+  --bg-section-color: rgba(50,50,50, 0.8);
+  --top-bg-color: rgb(10,10,10);
+  --top-text-color: white;
+  
+  /* overall tech skill bg color gradient settings*/
+
   --skillcolor2: #3e288f;
   --skillcolor1: palevioletred;
+
+  /* colored text (name, intro and whatnot) */ 
+
+  --color1: #3e288f;
+  --color2: palevioletred;
+  --color3: #533aad;
+  --color4: #8f76aa;
+  
+  /* card color for ipad layout */
+
+  --card-color1: rgb(0,64,221);
+  --card-color2: rgb(191,90,242);
+  --card-desc-bg-color: rgb(73, 76, 78);
+  --card-border-color: rgb(0, 0, 0);
+  --card-border-box-shadow: rgba(230,230,230,0.2);
+
+  /* mouse info */
+
+  --mouse-color1: rgba(35, 21, 87, 0.2);
+  --mouse-color2: rgba(143, 118, 170, 0.2);
+  
+  /* misc */
+
+  --text-decoration-color: palevioletred;
   --eventcolor: rgb(232, 219, 254);
 }
 
