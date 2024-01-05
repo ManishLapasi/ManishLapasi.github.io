@@ -4,6 +4,11 @@ import './Road.css'
 const Roads = () => {
     const myEvents = [
         {
+            dateOf: 'Dec 2023',
+            desc1: "Another 4.0 semester at Georgia Tech complete!",
+            desc2: "Courses: Big Data Systems and Analytics, Online Communities, Mobile Compuring and IoT, Principles of UI software"
+        },
+        {
             dateOf: 'May 2023',
             desc1: "Started interning at Georgia Tech's Center for Quality Growth!",
             desc2: "Building a ML model on spatial data served with a React front-end."

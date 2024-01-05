@@ -35,7 +35,7 @@ function App() {
       <Navbar setColor={setColor}/>
       <div className="App">
         <div className="BGSection">
-          <LandingPage />
+          <LandingPage color={color}/>
         </div>
         <div className="heading" id="s1">Skills</div>
         <div className="BGSection">

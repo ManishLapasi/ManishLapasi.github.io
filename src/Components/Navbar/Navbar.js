@@ -12,7 +12,7 @@ if (storedTheme) {
 }
 
 var darkcolor = "173,173,255";
-var lightcolor = "173, 173, 255";
+var lightcolor = "155,184,205";
 
 const handleClick = (setColor) => {
   let ele = document.getElementById("toggler");
@@ -23,7 +23,7 @@ const handleClick = (setColor) => {
   if (curr==='light'){
     curr = 'dark';
     ele.innerHTML = dark;
-    setColor(darkcolor)
+    setColor(darkcolor);
   }
   else {
     curr = 'light';
